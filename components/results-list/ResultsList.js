@@ -15,9 +15,8 @@ const ResultsList = ({ list, focusedID }) => (
         ` }
         </style>
         {
-            list.length ?
+            !!list.length &&
                 <ul >
-
                     {
                         list.map((item, i) =>
                             (
@@ -31,8 +30,7 @@ const ResultsList = ({ list, focusedID }) => (
                                 </li>
                             ))
                     }
-                </ul> :
-                <p>Sorry but we have no results</p>
+                </ul>
         }
     </div>
 );
